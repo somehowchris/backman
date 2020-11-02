@@ -32,6 +32,11 @@ func newLogger(writer io.Writer) *logrus.Logger {
 		FullTimestamp:    false,
 		DisableTimestamp: !config.Get().LoggingTimestamp,
 	})
+
+	if config.Get().EnableAPM == true {
+		logrus.AddHook(&apmlogrus.Hook{})
+	}
+
 	return logger
 }
 

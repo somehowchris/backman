@@ -13,6 +13,8 @@ require (
 	github.com/robfig/cron v1.2.0
 	github.com/sirupsen/logrus v1.4.2
 	github.com/stretchr/testify v1.6.1 // indirect
+	go.elastic.co/apm/module/apmechov4 v1.9.0 // indirect
+	go.elastic.co/apm/module/apmlogrus v1.9.0 // indirect
 	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0 // indirect
 	golang.org/x/sys v0.0.0-20201005172224-997123666555 // indirect
 )

@@ -29,6 +29,10 @@ func New() *Router {
 	e.Pre(middleware.RemoveTrailingSlash())
 	e.Use(middleware.Secure())
 
+	if config.Get().EnableAPM == true {
+		e.Use(apmechov4.Middleware())
+	}
+
 	// don't show timestamp unless specifically configured
 	format := `remote_ip="${remote_ip}", host="${host}", method=${method}, uri=${uri}, user_agent="${user_agent}", ` +
 		`status=${status}, error="${error}", latency_human="${latency_human}", bytes_out=${bytes_out}` + "\n"
