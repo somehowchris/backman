@@ -9,6 +9,7 @@ import (
 	"github.com/swisscom/backman/router/api"
 	"github.com/swisscom/backman/router/metrics"
 	"github.com/swisscom/backman/router/ui"
+	"go.elastic.co/apm/module/apmechov4"
 )
 
 type Router struct {
