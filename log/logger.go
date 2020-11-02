@@ -7,6 +7,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"github.com/swisscom/backman/config"
+	"go.elastic.co/apm/module/apmlogrus"
 )
 
 var (
